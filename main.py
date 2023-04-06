@@ -19,9 +19,6 @@ running = True
 
 while running:
 
-    # game.player.rect = game.player.image.get_rect() 
-    
-
     #gravity
     game.player.y_velocity += game.gravity
     game.player.rect.y += game.player.y_velocity
@@ -32,7 +29,6 @@ while running:
 
     the_x_loc = game.player.rect.x + 2
     the_center = (the_x_loc, 50)
-    # print(the_center, game.player.rect.y, game.player.rect)
     print(game.player.x_velocity)
 
     game.group.draw(game.screen)
@@ -55,7 +51,7 @@ while running:
                 if game.player.rect.y >= game.player.last_jump_y:
                     game.player.jump()
                 else:
-                    print("NOOOON")
+                    print("TEST")
     
     if game.player.rect.y > 600 or game.player.rect.y < 0:
         game.game_lose()
