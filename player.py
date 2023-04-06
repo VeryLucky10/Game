@@ -4,7 +4,6 @@ import time
 class Player(pygame.sprite.Sprite):
     last_jump_y = 0
     
-    # fonction appelée quand la classe Player sera lancée/chargée
     def __init__(self):
         super().__init__()
         self.pos = (100, 50)
@@ -20,7 +19,6 @@ class Player(pygame.sprite.Sprite):
     def jump(self):
         global last_jump_y
         global can_jump
-        # self.rect.y -= self.y_velocity
         self.y_velocity = -5
         can_jump = False
         last_jump_y = self.rect.y
